@@ -1,0 +1,32 @@
+{
+  "name": "keycloak-admin-client-cjs",
+  "version": "23.0.5",
+  "description": "This lib exports the [@keycloak/keycloak-admin-client](https://www.npmjs.com/package/@keycloak/keycloak-admin-client)  (an ECMA Script module) as a CommonJS module so it can be used in Typescript/CommonJS.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "esbuild dist/index.d.ts --platform=node --bundle --format=cjs --outfile=dist/index.js",
+    "prepublish": "npm run build",
+    "prepare": "husky",
+    "release": "commit-and-tag-version -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/locafox/keycloak-admin-client-cjs.git"
+  },
+  "author": "locafox",
+  "license": "ISC",
+  "dependencies": {
+    "@keycloak/keycloak-admin-client": "23.0.5"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "19.3.0",
+    "@commitlint/config-conventional": "19.2.2",
+    "commit-and-tag-version": "12.4.1",
+    "esbuild": "0.21.5",
+    "husky": "9.0.11"
+  },
+  "files": [
+    "dist/**/*"
+  ]
+}
